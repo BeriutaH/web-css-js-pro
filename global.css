@@ -90,6 +90,117 @@ h4 {
 .box-model {
     /*margin-right: 10px; !* 右边填充十个像素 *!*/
     /*padding-top: 8px;  !* 上填充8个像素 *!*/
+
     /*让一个上下边距同时为6像素，左右边距同时为12像素*/
-    margin: 6px 12px;  /* 当值只有两个的时候，第一个表示上下，第二个表示左右*/
+    /*margin: 6px 12px;  !* 当值只有两个的时候，第一个表示上下，第二个表示左右*!*/
+
+    margin: 18px 28px 24px 16px; /* 上右下左 */
+
+    /* 边框 单纯指定宽度还不够，还要指定类型 solid实线 dashed虚线 dotted点线 */
+    border: 2px dashed black;
+
+    /* 宽度和高度 */
+    width: 80px;
+    height: 120px;
+}
+
+/*块级元素*/
+.block {
+    display: block;
+}
+
+/*内联元素*/
+.inline {
+    display: inline;
+}
+
+/*内联块级元素*/
+.inline-block {
+    display: inline-block;
+    width: 100px;
+    height: 120px;
+}
+
+/*隐藏元素*/
+.none {
+    display: none;
+}
+
+/*弹性容器*/
+.flex {
+    display: flex;  /*即便是块级元素，在弹性容器里也不再独占一行*/
+    /*flex-direction: column;  !*调整方面，row是水平，column纵向*!*/
+
+    /* 在弹性不居中，可以沿着主轴和交叉轴以不同方式对齐其中的项目 */
+    /* 如果弹性方向为row，主轴就是横轴，column，主轴就是纵轴*/
+    height: 120px;
+    background-color: violet;
+
+    /*
+    负责主轴方向的各项目对齐,
+    flex-start主轴初始位置（默认值），
+    flex-end横向主轴末尾位置,
+    center对齐在横向主轴中心位置,
+    space-between将项目均匀地分摊在中间空白空间两侧没有
+    space-around 将项目均匀地分摊空白空间两侧会有
+    */
+    justify-content: space-around;
+    /* 负责沿交叉轴方向的各项目对齐,flex-start交叉轴初始位置, flex-end交叉轴末尾位置, center交叉轴中心位置 */
+    align-items: center;
+
+}
+
+/*!*每个弹性项目空间是可调整的*!*/
+/*.item {*/
+/*    flex: 1;*/
+/*}*/
+/*!*如果是一个元素占据的更多，可以单独设置*!*/
+/*.item-1 {*/
+/*    flex: 2;*/
+/*}*/
+
+/*如果不希望每个属性紧挨着，可以用gap调节*/
+.gap {
+    gap: 12px;
+}
+
+.grid {
+    display: grid;
+    /*!*指定三行，第一行高度100像素，第二行高度200像素，第三行高度300像素*!*/
+    /*grid-template-rows: 100px 200px 300px;*/
+    /*!*指定两列，第一列的占据空间是第二列的一半*!*/
+    /*grid-template-columns: 1fr 2fr;*/
+    grid-template-columns: repeat(4, 1fr);  /*四列等宽的*/
+
+    /*如果不想手动指定，可以设置自适应*/
+    grid-auto-rows: 100px; /*自适应每行100像素高*/
+    grid-auto-columns: 1fr; /*自适应每列等宽*/
+    /*如果不希望一个个紧挨着，可以使用gap*/
+    grid-gap: 12px;
+}
+
+/*.static {*/
+/*    position: static;*/
+/*}*/
+
+.relative {
+    position: relative;
+    height: 1000px;
+    background-color: palevioletred;
+}
+
+.absolute {
+    position: absolute;
+    /*right: 0; !*紧贴右侧*!*/
+    /*bottom: 0; !*紧贴底部*!*/
+
+    /*元素的左上角定位在父元素宽度和高度的 50% 位置*/
+    top: 50%; /* 元素顶部距离父元素顶部50% */
+    left: 50%; /* 元素左侧距离父元素左侧50% */
+    /*将元素自身的宽度和高度各移动一半*/
+    transform: translate(-50%, -50%); /* 使元素的中心与父元素的中心重合 */
+}
+
+.fixed {
+    position: fixed;
 }

@@ -54,8 +54,58 @@
     <p class="text-2">文本样式-2</p>
     <p class="text-3">文本样式-3</p>
 
-<!--盒子模型-->
-<div class="box-model">盒子模型</div>
+    <!--盒子模型-->
+    <div class="box-model">盒子模型</div>
 
+    <!--布局 Display-->
+    <div>块级元素：独占一行，并将容器会从上至下排列，有一些元素默认是块级的，div,p,h1等,也可以用 display:block 来设置某个元素为块级元素</div>
+        <span class="block">我本来</span>
+        <span class="block">不会独占一行</span>
+    <div>内联元素:不会独占一行，span，a,可以手动将块级元素设置为内联元素，display:inline </div>
+        <div class="inline">我本来会独占一行，</div>
+        <div class="inline">我也是独占一行，</div>
+        <div class="inline">现在我们三个变成了一行</div>
+    <div>内联块级元素：类似内联元素，但是可以设置宽度、高度、垂直方向的填充</div>
+        <div class="inline-block">我是一行啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</div>
+    <div class="none">隐藏元素：会在html出现，但是在页面不可见，不占用空间</div>
+
+    <!--弹性布局-->
+    <div>灵活布局: 默认方向是水平的，需要一个父容器，需要先讲一个容器设置为flex，然后这个容器里面的所有子元素都会成为这个弹性项目</div>
+        <div class="flex gap">
+            <div class="item">项目</div>
+            <div class="item-1">项目</div>
+            <div class="item">项目</div>
+            <div class="item">项目</div>
+        </div>
+
+    <!--网格布局-->
+    <div>网格布局:以行和列的形式划分容器，网格布局需要一个父容器</div>
+    <div class="grid">
+        <div>网格布局</div>
+        <div>网格布局</div>
+        <div>网格布局</div>
+        <div>网格布局</div>
+        <div>网格布局</div>
+        <div>网格布局</div>
+        <div>网格布局</div>
+        <div>网格布局</div>
+        <div>网格布局</div>
+        <div>网格布局</div>
+        <div>网格布局</div>
+        <div>网格布局</div>
+    </div>
+
+    <!--定位-->
+    <div>
+        定位:让某个元素脱离文档流根据某个特定位置进行定位的技术,不同定位的参考系不同
+    </div>
+    <div>relative -> 相对定位: 相对自身位置来定位</div>
+    <div>absolute -> 绝对定位: 相对最近的非静态定位static的父元素，所以你希望相对于谁，就将父元素设置为relative</div>
+    <div>fixed -> 固定定位: 相对于浏览器的窗口，随用户的滑动而移动</div>
+    <div class="relative">
+        <div class="fixed">导航栏或者侧边栏</div>
+        <div class="absolute">图片</div>
+    </div>
+    <div class="static">静态定位: 默认定位</div>
 </body>
 </html>
