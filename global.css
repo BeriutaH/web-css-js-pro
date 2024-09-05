@@ -1,0 +1,95 @@
+/*元素开头接花括号*/
+h4 {
+    color: darkgreen;
+}
+/*对类型分配样式以.类名 花括号*/
+.classSelector {
+    color: darkred;
+}
+/*对id选择器分配样式以 #id名 花括号*/
+#idSelector {
+    color: aqua;
+}
+.purple {
+    color: purple;
+}
+.orange {
+    color: orange;
+}
+
+.yellow {
+    color: yellow;
+}
+.child {
+    color: blue;
+}
+/*
+两种方式：
+    1.父类加空格加上子类的名称，可以具体到子类的样式
+    2. 父类嵌套子类的结构化
+*/
+/*.parent .child {*/
+/*    color: gray;*/
+/*}*/
+
+.parent {
+    .child {
+        color: gray;
+    }
+}
+
+.violet {
+    color: violet;
+}
+.text-lg {
+    font-size: 24px;
+}
+.text-center {
+    text-align: center;
+}
+.rgb {
+    color: rgb(235,70,224);
+}
+.hex {
+    color: #eb46e0;
+}
+.background-color {
+    background-color: #eb46e0;
+}
+.border-color {
+    border: 3px solid #eb46e0;
+}
+/* 对于RGB来说，后面加个a，就增加了一个透明度通道，可以调节当前颜色的透明度，取值范围 0~1*/
+.text-opacity {
+    color: rgba(235,70,224, 0.5);
+}
+/* opacity 是调整整个元素以及所有子元素的透明度，并不能精确的调整文本或背景的透明度*/
+.opacity {
+    opacity: 0.5;
+}
+/* 编译自己的文字属性 fonts-family */
+@font-face {
+    font-family: "MyTextStyle";
+    src: url("./fonts/Sevillana-Regular.ttf");
+
+}
+
+.text-1 {
+    font-family: MyTextStyle, 'sans-serif'; /* 出现在前面的优先级越高，往往是我们自定义的字体 */
+}
+.text-2 {
+    font-size: 24px;  /* 文字大小 */
+    line-height: 32px; /* 行间距 */
+}
+.text-3 {
+    font-weight: 400; /* 调整粗细 */
+    font-style: italic; /* 调整斜体 */
+    text-decoration: line-through; /* 装饰字体，underline 下划线、overline 上划线、line-through删除线等 */
+}
+
+.box-model {
+    /*margin-right: 10px; !* 右边填充十个像素 *!*/
+    /*padding-top: 8px;  !* 上填充8个像素 *!*/
+    /*让一个上下边距同时为6像素，左右边距同时为12像素*/
+    margin: 6px 12px;  /* 当值只有两个的时候，第一个表示上下，第二个表示左右*/
+}
